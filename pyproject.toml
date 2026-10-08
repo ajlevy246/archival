@@ -1,0 +1,41 @@
+[project]
+name = "archival"
+version = "0.0.1"
+authors = [
+    {name = "Alex Levy", email = "ajlevy246@gmail.com"},
+]
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICENSE.txt"]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+]
+
+[project.urls]
+homepage = "https://github.com/ajlevy246/archival"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"*" = ["*.tcss"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+
+[tool.coverage.run]
+source = ["archival"]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
