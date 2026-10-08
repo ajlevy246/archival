@@ -1,6 +1,7 @@
 [project]
 name = "archival"
 version = "0.0.1"
+requires-python = ">=3.11"
 authors = [
     {name = "Alex Levy", email = "ajlevy246@gmail.com"},
 ]
@@ -11,10 +12,15 @@ classifiers = [
 ]
 license = "MIT"
 license-files = ["LICENSE.txt"]
+dependencies = [
+    "numpy",
+]
 
 [project.optional-dependencies]
 dev = [
     "pytest",
+    "ruff",
+    "pyright",
 ]
 
 [project.urls]
