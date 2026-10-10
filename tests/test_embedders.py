@@ -5,7 +5,6 @@ import numpy as np
 from archival.embedders import SentenceTransformerEmbedder
 from archival.types import Representation
 
-
 MODEL_ID = "sentence-transformers/all-MiniLM-L6-v2"
 
 
