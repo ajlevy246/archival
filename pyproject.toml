@@ -1,10 +1,10 @@
 [project]
 name = "archival"
 version = "0.0.1"
-requires-python = ">=3.11"
 authors = [
     {name = "Alex Levy", email = "ajlevy246@gmail.com"},
 ]
+description = "Semantic search index for a subset of the ArXiv pre-print repository."
 readme = "README.md"
 classifiers = [
     "Programming Language :: Python :: 3",
@@ -13,6 +13,7 @@ classifiers = [
 license = "MIT"
 license-files = ["LICENSE.txt"]
 dependencies = [
+    "sickle",
     "numpy",
 ]
 
@@ -21,6 +22,11 @@ dev = [
     "pytest",
     "ruff",
     "pyright",
+]
+ingest = [
+    "sentence-transformers",
+    "torchvision",
+    "Pillow",
 ]
 
 [project.urls]
@@ -32,12 +38,6 @@ build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
 where = ["src"]
-
-[tool.setuptools.package-data]
-"*" = ["*.tcss"]
-
-[tool.pytest.ini_options]
-asyncio_mode = "auto"
 
 [tool.coverage.run]
 source = ["archival"]
